@@ -1,0 +1,54 @@
+<div class="page-content">
+	<div class="row">
+	  <div class="col-md-2">
+	  	<div class="sidebar content-box" style="display: block;">
+            <ul class="nav">
+                <!-- Main menu -->
+              	{{#each model as |task|}}
+              	  <li class="current">
+              	  	<i class="glyphicon glyphicon-home"></i>
+              	  	{{#link-to "tasks.task.items" task}}{{task.name}}{{/link-to}}
+              	  </li>
+              	{{/each}}
+            </ul>
+         </div>
+	  </div>
+	  <div class="col-md-10">
+	  	<div class="row">
+	  		<div class="col-md-6">
+	  			<div class="content-box-large">
+	  				<div class="panel-heading">
+						<div class="panel-title">{{task.name}}</div>
+						
+						<div class="panel-options">
+							<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+							<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+						</div>
+					</div>
+	  				<div class="panel-body">
+	  					{{outlet}}
+	  				</div>
+	  			</div>
+	  		</div>
+
+	  		<div class="col-md-6">
+	  			<div class="row">
+	  				<div class="col-md-12">
+	  					<div class="content-box-header">
+		  					<div class="panel-title"></div>
+							
+							<div class="panel-options">
+								<a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+								<a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+							</div>
+			  			</div>
+			  			<div class="content-box-large box-with-header">
+							{{outlet "commentsTemplate"}}
+						</div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</div>
+	</div>
+</div>
+</div>

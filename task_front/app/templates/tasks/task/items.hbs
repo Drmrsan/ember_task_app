@@ -1,0 +1,8 @@
+<ul>
+	{{#each model.items as |item|}}
+		<li>{{#link-to "tasks.task.items.item.comments" item}}{{item.title}}{{/link-to}}</li>
+	{{/each}}	
+</ul>
+
+
+{{outlet}}
