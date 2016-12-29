@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	// model(params){
-	// 	return this.store.findRecord('task', params.task_id);
-	// },
+	model(params){
+		return this.store.findRecord('task', params.task_id);
+	},
 
 	// renderTemplate(){
 	// 	this.render('tasks.task.items.item', {

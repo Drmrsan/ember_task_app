@@ -5,6 +5,6 @@ export default Ember.Route.extend({
 		this.render('tasks.task.items.item.comments', {
 			into: 'tasks',
 			outlet: 'commentsTemplate'
-		})
+		});
 	}
 });

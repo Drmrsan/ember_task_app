@@ -1,10 +1,8 @@
 <div class="input-group">
-	
 	{{input value=title type="text" class="form-control" placeholder="Add new task item..."}}
-	{{input value=task_id type="text" class="form-control" placeholder="task_id"}}
-	{{!-- <span class="input-group-btn"> --}}
-    <button{{action 'createItem'}} class="btn btn-default" type="button"><i class="glyphicon glyphicon-plus"></i></button>
-  {{!-- </span> --}}
+	<span class="input-group-btn">
+    <button{{action 'createItem' }} class="btn btn-default" type="button"><i class="glyphicon glyphicon-plus"></i></button>
+  </span>
 	{{!-- when i create item edit action add body section --}}
 </div>
 
