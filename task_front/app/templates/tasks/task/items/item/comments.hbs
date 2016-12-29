@@ -1,5 +1,5 @@
 {{#each model.comments as |comment|}}
-  {{comment.content}}
+	<div class="well">
+		<p>{{comment.content}}</p>
+	</div>
 {{/each}}
-
-{{outlet}}

@@ -1,8 +1,19 @@
-<ul>
-	{{#each model.items as |item|}}
-		<li>{{#link-to "tasks.task.items.item.comments" item}}{{item.title}}{{/link-to}}</li>
-	{{/each}}	
-</ul>
+<div class="input-group">
+	{{input value=title type="text" class="form-control" placeholder="Add new task item..."}}
+	<span class="input-group-btn">
+    <button{{action 'createItem'}} class="btn btn-default" type="button"><i class="glyphicon glyphicon-plus"></i></button>
+  </span>
+	{{!-- when i create item edit action add body section --}}
+</div>
 
+<br>
+
+{{#each model.items as |item|}}
+	{{#link-to "tasks.task.items.item.comments" item}}
+		<div class="well">
+			<h5>{{item.title}}</h5>
+		</div>
+	{{/link-to}}
+{{/each}}
 
 {{outlet}}
